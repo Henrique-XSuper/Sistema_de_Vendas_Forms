@@ -1,0 +1,79 @@
+CREATE TABLE Cliente (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Cliente VARCHAR(100) ,
+    CPF VARCHAR(14) ,
+    RG VARCHAR(20),
+    CEP VARCHAR(10),
+    DataNascimento DATE,
+    RendaMensal DECIMAL(10,2),
+    Gmail VARCHAR(100),
+    Telefone VARCHAR(20)
+);
+
+
+CREATE TABLE Vendedor (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Nome VARCHAR(100),
+    Sobrenome VARCHAR(100),
+    CPF VARCHAR(14),
+    RG VARCHAR(20),
+    Gmail VARCHAR(100),
+    Telefone VARCHAR(20)
+);
+
+CREATE TABLE Imovel (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Endereco VARCHAR(200),
+    Tipo VARCHAR(50),
+    Valor DECIMAL(18, 2)
+);
+
+CREATE TABLE Automovel (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Modelo VARCHAR(100) ,
+    Marca VARCHAR(100),
+    Valor DECIMAL(18,2),
+    Ano INT
+);
+
+CREATE TABLE Venda (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    IdAutomovel INT NOT NULL,
+    IdCliente INT NOT NULL,  -- Adicionando a coluna para relacionar com Cliente
+    Vendedor VARCHAR(100) NOT NULL,  -- Mantendo o tamanho do Vendedor
+    Marca VARCHAR(50) NOT NULL,
+    Modelo VARCHAR(50) NOT NULL,
+    DataVenda DATE NOT NULL,
+    Valor DECIMAL(18,2) NOT NULL,
+    CONSTRAINT FK_Venda_Automovel 
+        FOREIGN KEY (IdAutomovel) 
+        REFERENCES Automovel(Id)
+        ON DELETE NO ACTION
+        ON UPDATE NO ACTION,
+    CONSTRAINT FK_Venda_Cliente 
+        FOREIGN KEY (IdCliente) 
+        REFERENCES Cliente(Id)  -- Relacionamento com a tabela Cliente
+        ON DELETE NO ACTION
+        ON UPDATE NO ACTION,
+    CONSTRAINT FK_Venda_Vendedor 
+        FOREIGN KEY (Vendedor) 
+        REFERENCES Vendedor(Vendedor)
+        ON DELETE NO ACTION
+        ON UPDATE NO ACTION
+);
+
+
+CREATE TABLE FornecedoresProdutos (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Fornecedor VARCHAR(100),
+    Telefone VARCHAR(20),
+    Gmail VARCHAR(100),
+    Produto VARCHAR(100),
+    TipoProduto VARCHAR(50),
+    PrecoBruto DECIMAL(10,2),
+    DataRecebimento DATE
+);
+
+
+
+
