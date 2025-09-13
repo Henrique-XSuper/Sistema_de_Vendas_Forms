@@ -1,4 +1,5 @@
-#🧾 Descrição do Projeto
+🧾 Descrição do Projeto
+--
 
 Este projeto é um sistema desktop desenvolvido em C# com Windows Forms, voltado para o gerenciamento de vendas de -consórcios. 
 O sistema permite o cadastro e controle de informações relacionadas a clientes, vendedores, fornecedores, automóveis, imóveis e vendas.
