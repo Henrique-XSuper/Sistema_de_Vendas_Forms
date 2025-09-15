@@ -44,26 +44,26 @@ SQL Server
 
 📦 Estrutura do Projeto
 -
-/ConsorcioApp
-│
-├── Forms
-│   ├── ClienteForm.cs
-│   ├── VendedorForm.cs
-│   ├── FornecedorForm.cs
-│   ├── AutomovelForm.cs
-│   ├── ImovelForm.cs
-│   └── VendaForm.cs
-│
-├── Models
-│   ├── Cliente.cs
-│   ├── Vendedor.cs
-│   ├── Fornecedor.cs
-│   ├── Automovel.cs
-│   ├── Imovel.cs
-│   └── Venda.cs
-│
-├── Program.cs
-└── README.md
+/ConsorcioApp <br>
+│<br>
+├── Forms<br>
+│   ├── ClienteForm.cs <br>
+│   ├── VendedorForm.cs<br>
+│   ├── FornecedorForm.cs<br>
+│   ├── AutomovelForm.cs<br>
+│   ├── ImovelForm.cs<br>
+│   └── VendaForm.cs<br>
+│<br>
+├── Models<br>
+│   ├── Cliente.cs<br>
+│   ├── Vendedor.cs<br>
+│   ├── Fornecedor.cs<br>
+│   ├── Automovel.cs<br>
+│   ├── Imovel.cs<br>
+│   └── Venda.cs<br>
+│<>
+├── Program.cs<br>
+└── README.md<br>
 
 ---
 
@@ -83,5 +83,5 @@ Navegue pelos formulários para cadastrar e gerenciar os dados.
 
 📌 Observações
 -
-O projeto pode ser expandido com funcionalidades como geração de relatórios, integração com banco de dados, autenticação de usuários e exportação de dados.
+O projeto pode ser expandido com funcionalidades como geração de relatórios,autenticação de usuários e exportação de dados.
 Ideal para uso em pequenas e médias empresas que trabalham com consórcios de veículos e imóveis.
