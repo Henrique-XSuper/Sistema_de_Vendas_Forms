@@ -85,3 +85,8 @@ Navegue pelos formulários para cadastrar e gerenciar os dados.
 -
 O projeto pode ser expandido com funcionalidades como geração de relatórios,autenticação de usuários e exportação de dados.
 Ideal para uso em pequenas e médias empresas que trabalham com consórcios de veículos e imóveis.
+
+---
+📝Licença 
+-
+este programa esta sobre a licença BSD 2.
